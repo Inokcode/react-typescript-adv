@@ -4,12 +4,12 @@ import React from 'react'
 type GreetProps = {
     name: string
     messageCount: number
+    isLoggedIn: boolean
 }
 const Greet = (props: GreetProps) => {
     return (
         <div>
-            {props.name} ALL
-            {props.messageCount}
+            <h2>{props.isLoggedIn ? `{props.name} ALL {props.messageCount}` : "Welcome Guest"}</h2>
         </div>
     )
 }
