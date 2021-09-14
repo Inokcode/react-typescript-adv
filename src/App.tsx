@@ -7,6 +7,8 @@ import PersonList from './components/PersonList';
 import Status from './components/Status';
 import Heading from './components/Heading';
 import Oscar from './components/Oscar';
+import Button from './components/Button';
+import Input from './components/Input';
 
 function App() {
   // object
@@ -27,13 +29,15 @@ function App() {
   ]
   return (
     <div className="App">
-      <Greet name="GBU" messageCount={20} isLoggedIn={false} />
+      {/* <Greet name="GBU" messageCount={20} isLoggedIn={false} />
       <Person name={personName} />
       <PersonList names={nameList} />
       <Status status="loading" />
       <Heading>Children are here</Heading>
       <Oscar><Heading>passing Child componets</Heading></Oscar>
-      <Greet name="optional types" isLoggedIn={true} />
+      <Greet name="optional types" isLoggedIn={true} /> */}
+      <Button handleClick={(event, id) => console.log('Button clicked', event, id)}></Button>
+      <Input value='' handleChange={(event) => console.log(event)} />
     </div>
   );
 }
